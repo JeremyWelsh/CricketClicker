@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns="http://www.w3.org/ns/widgets" xmlns:tizen="http://tizen.org/ns/widgets" id="http://yourdomain/CricketClicker" version="1.0.0" viewmodes="maximized">
+    <tizen:application id="jUyQ69RbgV.CricketClicker" package="jUyQ69RbgV" required_version="5.5"/>
+    <author href="https://github.com/JeremyWelsh" email="welshjm15@gmail.com">Jeremy Welsh</author>
+    <content src="index.html"/>
+    <description>Cricket Clicker Wearable app for the Galaxy Watch 46mm to keep track of bowling loads when training.</description>
+    <feature name="http://tizen.org/feature/screen.size.normal"/>
+    <icon src="icon.png"/>
+    <name>CricketClicker</name>
+    <tizen:profile name="wearable"/>
+    <tizen:setting hwkey-event="enable"/>
+</widget>
