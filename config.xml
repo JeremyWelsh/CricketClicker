@@ -5,6 +5,7 @@
     <content src="index.html"/>
     <description>Cricket Clicker Wearable app for the Galaxy Watch 46mm to keep track of bowling loads when training.</description>
     <feature name="http://tizen.org/feature/screen.size.normal"/>
+    <feature name="http://tizen.org/feature/input.rotating_bezel"/>
     <icon src="icon.png"/>
     <name>CricketClicker</name>
     <tizen:profile name="wearable"/>
