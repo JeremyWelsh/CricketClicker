@@ -40,7 +40,7 @@
         if (direction === 'CW') {
             /* Add behavior for clockwise rotation */
             console.log('clockwise');
-            textbox.innerHTML ="clockwise";
+            textbox.innerHTML ="Started";
         } else if (direction === 'CCW') {
             //do nothing in case it was by accident
         }
