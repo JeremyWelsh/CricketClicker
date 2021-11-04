@@ -15,13 +15,13 @@ body {
 	box-sizing: border-box;
 	-webkit-box-sizing: border-box;
 	height:100%;
-	background-color:#aa4ce8;
+	background-color:#00113b;
 }
 
 
 .load_text {
 	text-align: center;
-	font-size:1.5em;
+	font-size:2.5em;
 	color:#fff;
-	background-color:#52e396;
+	background-color:#00113b;
 }
