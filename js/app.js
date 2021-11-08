@@ -18,7 +18,9 @@ window.addEventListener("tizenhwkey", function(ev) {
     }
 });
 
-var loadCount = 0;
+var BallCount = 0;
+var OverCount = 0;
+
 var bezel = tizen.systeminfo.getCapability('http://tizen.org/feature/input.rotating_bezel');
 console.log(bezel); // checks if it has a bezel
 
@@ -29,15 +31,26 @@ window.addEventListener('rotarydetent', function(ev) {
     var textbox = document.querySelector('.contents');
     textbox = document.querySelector('#textbox');
     if (direction === 'CW') {
-    	loadCount++;
+    	if(BallCount >=5){
+    		OverCount++;
+        	BallCount = 0;
+    	}else{
+        	BallCount++;
+    	}    	
         console.log('clockwise');
-        console.log('loadCount'+loadCount);
-        textbox.innerHTML = loadCount;
+        console.log('BallCount'+ BallCount);
+        textbox.innerHTML = OverCount+"."+BallCount;
     } else if (direction === 'CCW') {
-        loadCount--;
+    	if(BallCount === 0 && OverCount === 0){
+    	}else if(BallCount <=0){
+    		OverCount--;
+        	BallCount = 5;
+    	}else{
+        	BallCount--;
+    	}
         console.log('anti-clockwise');
-        console.log('loadCount'+loadCount);
-        textbox.innerHTML = loadCount;
+        console.log('BallCount'+ BallCount);
+        textbox.innerHTML = OverCount+"."+BallCount;
 
     }
 });
