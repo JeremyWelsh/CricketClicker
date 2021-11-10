@@ -1,21 +1,22 @@
- var BallCount = 0;
- var OverCount = 0;
-
+var BallCount = 0,
+	OverCount = 0,
+	WicketCount = 0,
+	WideCount = 0;
  console.log("app started");
- 
+ /*
  window.onload = function() {
 	 console.log("onload function running");
      var page = null,
          pageId = "";
      page = document.getElementsByClassName("ui-page-active")[0];
      pageId = page ? page.id : "";
-     if (pageId === "loadCounter") {
+     if (pageId === "main") {
          var textbox = document.querySelector('.contents');
          textbox = document.querySelector('#textbox');
          textbox.innerHTML = OverCount + "." + BallCount;
      }
  };
-
+*/
  // Event listener for back key
  window.addEventListener("tizenhwkey", function(ev) {
      var activePopup = null,
@@ -25,12 +26,17 @@
          activePopup = document.querySelector(".ui-popup-active");
          page = document.getElementsByClassName("ui-page-active")[0];
          pageId = page ? page.id : "";
+         var textbox = document.querySelector('.contents');
+         textbox = document.querySelector('#textbox');
          if (pageId === "main" && !activePopup) {
-             try {
-                 tizen.application.getCurrentApplication().exit();
-             } catch (ignore) {}
-         } else {
-             window.history.back();
+        	 if (BallCount >= 5) {
+                 OverCount++;
+                 BallCount = 0;
+             } else {
+                 BallCount++;
+             }
+             console.log('OverCount . BallCount ' + OverCount + "." + BallCount);
+             textbox.innerHTML = OverCount + "." + BallCount;
          }
      }
  });
@@ -47,7 +53,7 @@
          pageId = "";
      page = document.getElementsByClassName("ui-page-active")[0];
      pageId = page ? page.id : "";
-     if (pageId === "loadCounter") {
+     if (pageId === "main") {
          var direction = ev.detail.direction;
          var textbox = document.querySelector('.contents');
          textbox = document.querySelector('#textbox');
@@ -55,26 +61,17 @@
              return;
          }
          if (direction === 'CW') {
-             if (BallCount >= 5) {
-                 OverCount++;
-                 BallCount = 0;
-             } else {
-                 BallCount++;
-             }
+             WicketCount++;
              console.log('clockwise');
-             console.log('OverCount . BallCount ' + BallCount + "." + OverCount);
-             textbox.innerHTML = OverCount + "." + BallCount;
+             console.log('WicketCount'+ WicketCount);
+             //needs to be changed to a new textbox thing
+             //textbox.innerHTML = WicketCount;
          } else if (direction === 'CCW') {
-             if (BallCount === 0 && OverCount === 0) {} else if (BallCount <= 0) {
-                 OverCount--;
-                 BallCount = 5;
-             } else {
-                 BallCount--;
-             }
+        	 WideCount++;
              console.log('anti-clockwise');
-             console.log('OverCount . BallCount ' + BallCount + "." + OverCount);
-             textbox.innerHTML = OverCount + "." + BallCount;
-
+             console.log('WideCount'+ WideCount);
+             //needs to be changed to a new textbox thing
+             //textbox.innerHTML = WideCount;
          }
          cooldown = true;
          setTimeout(function() {
