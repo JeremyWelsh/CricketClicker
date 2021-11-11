@@ -10,6 +10,7 @@ body {
 .contents {
 	display: flex;
 	display: -webkit-flex;
+	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	box-sizing: border-box;
@@ -21,7 +22,7 @@ body {
 
 .load_text {
 	text-align: center;
-	font-size:2.5em;
+	font-size:1.5em;
 	color:#fff;
 	background-color:#00113b;
 }

@@ -27,7 +27,7 @@ var BallCount = 0,
          page = document.getElementsByClassName("ui-page-active")[0];
          pageId = page ? page.id : "";
          var textbox = document.querySelector('.contents');
-         textbox = document.querySelector('#textbox');
+         textbox = document.querySelector('#ballover');
          if (pageId === "main" && !activePopup) {
         	 if (BallCount >= 5) {
                  OverCount++;
@@ -55,8 +55,10 @@ var BallCount = 0,
      pageId = page ? page.id : "";
      if (pageId === "main") {
          var direction = ev.detail.direction;
-         var textbox = document.querySelector('.contents');
-         textbox = document.querySelector('#textbox');
+         var textboxw = document.querySelector('.contents');
+         textboxw = document.querySelector('#wicket');
+         var textboxe = document.querySelector('.contents');
+         textboxe = document.querySelector('#extra');
          if (cooldown) {
              return;
          }
@@ -65,13 +67,13 @@ var BallCount = 0,
              console.log('clockwise');
              console.log('WicketCount'+ WicketCount);
              //needs to be changed to a new textbox thing
-             //textbox.innerHTML = WicketCount;
+             textboxw.innerHTML = 'W: '+WicketCount;
          } else if (direction === 'CCW') {
         	 WideCount++;
              console.log('anti-clockwise');
              console.log('WideCount'+ WideCount);
              //needs to be changed to a new textbox thing
-             //textbox.innerHTML = WideCount;
+             textboxe.innerHTML = 'E: '+ WideCount;
          }
          cooldown = true;
          setTimeout(function() {
