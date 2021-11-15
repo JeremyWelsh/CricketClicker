@@ -26,3 +26,9 @@ body {
 	color:#fff;
 	background-color:#00113b;
 }
+
+
+button {
+	background-image: url(outline_refresh_white_24dp.png);
+	transform: scaleX(-1);
+}
