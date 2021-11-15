@@ -18,6 +18,12 @@ console.log("app started");
      }
  };
 */
+var textboxw = document.querySelector('.contents');
+textboxw = document.querySelector('#wicket');
+var textboxe = document.querySelector('.contents');
+textboxe = document.querySelector('#extra');
+var textbox = document.querySelector('.contents');
+textbox = document.querySelector('#ballover');
 // Event listener for back key
 window.addEventListener("tizenhwkey", function(ev) {
     var activePopup = null,
@@ -27,8 +33,6 @@ window.addEventListener("tizenhwkey", function(ev) {
         activePopup = document.querySelector(".ui-popup-active");
         page = document.getElementsByClassName("ui-page-active")[0];
         pageId = page ? page.id : "";
-        var textbox = document.querySelector('.contents');
-        textbox = document.querySelector('#ballover');
         if (pageId === "main" && !activePopup) {
             if (BallCount >= 5) {
                 OverCount++;
@@ -56,10 +60,6 @@ window.addEventListener('rotarydetent', function(ev) {
     pageId = page ? page.id : "";
     if (pageId === "main") {
         var direction = ev.detail.direction;
-        var textboxw = document.querySelector('.contents');
-        textboxw = document.querySelector('#wicket');
-        var textboxe = document.querySelector('.contents');
-        textboxe = document.querySelector('#extra');
         if (cooldown) {
             return;
         }
@@ -90,4 +90,7 @@ function resetStats() {
     OverCount = 0;
     WicketCount = 0;
     ExtraCount = 0;
+    textbox.innerHTML = OverCount + "." + BallCount;
+    textboxw.innerHTML = 'W: ' + WicketCount;
+    textboxe.innerHTML = 'E: ' + ExtraCount;
 }

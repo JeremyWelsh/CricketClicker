@@ -17,6 +17,7 @@ body {
 	-webkit-box-sizing: border-box;
 	height:100%;
 	background-color:#00113b;
+ 	border-radius: 100%;
 }
 
 
@@ -27,8 +28,18 @@ body {
 	background-color:#00113b;
 }
 
-
-button {
-	background-image: url(outline_refresh_white_24dp.png);
+.reset_button {
+	background-color: #4CAF50; /* Green */
+  	border: none;
+  	background-image:url(outline_refresh_white_24dp.png);
+  	background-position:50% 50%;
+    background-repeat:no-repeat;  
+  	size: 50px 50px;
+  	padding: 26px 26px;
+ 	border-radius: 100%;
+ 	font-size:0;
+}
+.reset {
+	size: 48px 48px;
 	transform: scaleX(-1);
 }
