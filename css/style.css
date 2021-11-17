@@ -23,7 +23,7 @@ body {
 
 .OBCount {
 	text-align: center;
-	font-size:2.5em;
+	font-size:3.5em;
 	color:#fff;
 	background-color:#00113b;
 }
@@ -41,7 +41,7 @@ body {
 }
 
 .reset_button {
-	background-color: #4CAF50; /* Green */
+	background-color: #4CAF50;
   	border: none;
   	background-image:url(outline_refresh_white_24dp.png);
   	background-position:50% 50%;
@@ -51,23 +51,21 @@ body {
  	border-radius: 100%;
  	font-size:0;
  	position: absolute;
-}
-.reset {
-	size: 48px 48px;
-	transform: scaleX(-1);
+ 	left: 5px;
+ 	
 }
 
+
 .topSection {
-	flex-grow: 3;
+	flex-grow: 1;
 	display: flex;
 	display: -webkit-flex;
 	flex-direction: column;
-	justify-content: space-around;
+	justify-content: flex-start;
 	align-items: center;
 	
 }
 .topInner {
-	background-color: #3311ff;
 	padding: 0em;
 	display: flex;
 	display: -webkit-flex;
@@ -78,7 +76,7 @@ body {
 	
 }
 .bottomSection {
-	flex-grow: 1;
+	flex-grow: 15;
 	display: flex;
 	display: -webkit-flex;
 	flex-direction: row;
@@ -86,24 +84,37 @@ body {
 	align-items: center;
 }
 .wickets {
-	background-color: #ff33ff;
+	display: flex;
+	display: -webkit-flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: stretch;
+	margin-right: 5px;
+	
 }
 .extras {
-	background-color: #ffff33;
+	display: flex;
+	display: -webkit-flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: stretch;
+	margin-left: 5px;
 }
 
 .OBtext {
 	color: #cc33ff;
-	font-size:0.75em;
+	font-size:0.8em;
 	margin: 0em;
+	margin-top: 0.5em;
+	margin-bottom:2em;
 }
 .Wtext {
 	color: #33ff33;
-	font-size:0.75em;
+	font-size:0.8em;
 	margin: 0em;
 }
 .Etext {
 	color: #ff3333;
-	font-size:0.75em;
+	font-size:0.8em;
 	margin: 0em;
 }

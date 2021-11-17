@@ -62,12 +62,12 @@ window.addEventListener('rotarydetent', function(ev) {
             WicketCount++;
             console.log('clockwise');
             console.log('WicketCount' + WicketCount);
-            textboxw.innerHTML = 'W: ' + WicketCount;
+            textboxw.innerHTML = WicketCount;
         } else if (direction === 'CCW') {
             ExtraCount++;
             console.log('anti-clockwise');
             console.log('ExtraCount' + ExtraCount);
-            textboxe.innerHTML = 'E: ' + ExtraCount;
+            textboxe.innerHTML = ExtraCount;
         }
         cooldown = true;
         setTimeout(function() {
@@ -79,11 +79,11 @@ window.addEventListener('rotarydetent', function(ev) {
 
 function resetStats() {
 	console.log("reset stats");
-    BallCount = 5;
-    OverCount = 20;
+    BallCount = 0;
+    OverCount = 0;
     WicketCount = 0;
     ExtraCount = 0;
     textbox.innerHTML = OverCount + "." + BallCount;
-    textboxw.innerHTML = 'W: ' + WicketCount;
-    textboxe.innerHTML = 'E: ' + ExtraCount;
+    textboxw.innerHTML = WicketCount;
+    textboxe.innerHTML = ExtraCount;
 }
