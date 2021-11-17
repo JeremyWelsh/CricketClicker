@@ -11,18 +11,30 @@
 </head>
 
 <body>
-    <div class="ui-page ui-page-active" id="main">
+    <div class="ui-page ui-page-active" id="main" style="background-color: #33ffff;">
         <div class=contents>
-        
-            <span class=load_text id="ballover">0.0</span>
-        	<button type="button" class="reset_button" onclick="resetStats()">
-        	reset
-       		</button>
-            <span class=load_text id="wicket">W: 0</span>
-            <span class=load_text id="extra">E: 0</span>
+            <div class=topSection>
+                <p class=OBtext>Over Ball</p>
+                <div class=topInner>
+                    <span class=OBCount id="ballover">0.0</span>
+                </div>
+            </div>
+            <div class=bottomSection>
+                <div class=wickets>
+                    <span class=WCount id="wicket">W: 0</span>
+                    <p class=Wtext>Wickets</p>
+                </div>
+                <div class=extras>
+                    <span class=ECount id="extra">E: 0</span>
+                    <p class=Etext>Extras</p>
+                </div>
+            </div>
+            <button type="button" class="reset_button" onclick="resetStats()">
+            	reset
+            </button>
         </div>
     </div>
-    
+
     <script src="lib/tau/wearable/js/tau.min.js"></script>
     <script src="js/app.js"></script>
     <script src="js/circle-helper.js"></script>

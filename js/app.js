@@ -62,13 +62,11 @@ window.addEventListener('rotarydetent', function(ev) {
             WicketCount++;
             console.log('clockwise');
             console.log('WicketCount' + WicketCount);
-            //needs to be changed to a new textbox thing
             textboxw.innerHTML = 'W: ' + WicketCount;
         } else if (direction === 'CCW') {
             ExtraCount++;
             console.log('anti-clockwise');
             console.log('ExtraCount' + ExtraCount);
-            //needs to be changed to a new textbox thing
             textboxe.innerHTML = 'E: ' + ExtraCount;
         }
         cooldown = true;
@@ -81,8 +79,8 @@ window.addEventListener('rotarydetent', function(ev) {
 
 function resetStats() {
 	console.log("reset stats");
-    BallCount = 0;
-    OverCount = 0;
+    BallCount = 5;
+    OverCount = 20;
     WicketCount = 0;
     ExtraCount = 0;
     textbox.innerHTML = OverCount + "." + BallCount;

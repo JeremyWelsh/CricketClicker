@@ -12,7 +12,7 @@ body {
 	display: -webkit-flex;
 	flex-direction: column;
 	justify-content: center;
-	align-items: center;
+	align-items: stretch;
 	box-sizing: border-box;
 	-webkit-box-sizing: border-box;
 	height:100%;
@@ -21,7 +21,19 @@ body {
 }
 
 
-.load_text {
+.OBCount {
+	text-align: center;
+	font-size:2.5em;
+	color:#fff;
+	background-color:#00113b;
+}
+.WCount {
+	text-align: center;
+	font-size:1.5em;
+	color:#fff;
+	background-color:#00113b;
+}
+.ECount {
 	text-align: center;
 	font-size:1.5em;
 	color:#fff;
@@ -38,8 +50,60 @@ body {
   	padding: 26px 26px;
  	border-radius: 100%;
  	font-size:0;
+ 	position: absolute;
 }
 .reset {
 	size: 48px 48px;
 	transform: scaleX(-1);
+}
+
+.topSection {
+	flex-grow: 3;
+	display: flex;
+	display: -webkit-flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	
+}
+.topInner {
+	background-color: #3311ff;
+	padding: 0em;
+	display: flex;
+	display: -webkit-flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	width:100%;
+	
+}
+.bottomSection {
+	flex-grow: 1;
+	display: flex;
+	display: -webkit-flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+.wickets {
+	background-color: #ff33ff;
+}
+.extras {
+	background-color: #ffff33;
+}
+
+.OBtext {
+	color: #cc33ff;
+	font-size:0.75em;
+	margin: 0em;
+}
+.Wtext {
+	color: #33ff33;
+	font-size:0.75em;
+	margin: 0em;
+}
+.Etext {
+	color: #ff3333;
+	font-size:0.75em;
+	margin: 0em;
 }
