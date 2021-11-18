@@ -1,7 +1,12 @@
 /* this file is left blank on purpose, if developer can't find classes he needs in framework, he can customize his
 app adding his own styles here
  */
-
+@font-face {
+  font-family: 'Montserrat';
+  font-style: italic;
+  font-weight: 700;
+  src: url("montserrat/Montserrat-BoldItalic.ttf");
+}
 body {
     margin: 0px auto;
     background-color:#000;
@@ -18,8 +23,8 @@ body {
 	height:100%;
 	background-color:#00113b;
  	border-radius: 100%;
+ 	font-family: 'Montserrat';
 }
-
 
 .OBCount {
 	text-align: center;
@@ -52,36 +57,24 @@ body {
  	font-size:0;
  	position: absolute;
  	left: 5px;
- 	
 }
-
 
 .topSection {
 	flex-grow: 1;
 	display: flex;
 	display: -webkit-flex;
 	flex-direction: column;
-	justify-content: flex-start;
+	justify-content: flex-end;
 	align-items: center;
-	
 }
-.topInner {
-	padding: 0em;
-	display: flex;
-	display: -webkit-flex;
-	flex-direction: row;
-	justify-content: center;
-	align-items: center;
-	width:100%;
-	
-}
+
 .bottomSection {
-	flex-grow: 15;
+	flex-grow: 1;
 	display: flex;
 	display: -webkit-flex;
 	flex-direction: row;
 	justify-content: center;
-	align-items: center;
+	align-items: flex-start;
 }
 .wickets {
 	display: flex;
@@ -101,13 +94,6 @@ body {
 	margin-left: 5px;
 }
 
-.OBtext {
-	color: #cc33ff;
-	font-size:0.8em;
-	margin: 0em;
-	margin-top: 0.5em;
-	margin-bottom:2em;
-}
 .Wtext {
 	color: #33ff33;
 	font-size:0.8em;
