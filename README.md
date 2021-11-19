@@ -20,4 +20,11 @@ Cricket Clicker Wearable app for the Samsung Galaxy Watch 46mm to keep track of 
 * Adding to the Over/Ball count via hardware button for efficiency of use and tactile feedback.
 * Counts are stored in the app when temporarily closed.
 
+## Trying out the app
+Currently the only way to try the app is to:
 
+* Install Tizen Studio
+* Clone the repository and open it in Tizen Studio
+* Either connect a Physical device using the Device manager tool in Tizen Studio (Ensure the watch is on the same wifi and then create a connection with the watch using Remote Device Manager)
+* Or download and install the wearable-5.5-circle-x86 emulator from Samsung and use Emulator Manager to launch it (Requires an Intel CPU)
+* Finally right click the project and build it, and then run the project as a Tizen Web Application
