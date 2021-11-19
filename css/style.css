@@ -1,7 +1,12 @@
 /* this file is left blank on purpose, if developer can't find classes he needs in framework, he can customize his
 app adding his own styles here
  */
-
+@font-face {
+  font-family: 'Montserrat';
+  font-style: italic;
+  font-weight: 700;
+  src: url("montserrat/Montserrat-BoldItalic.ttf");
+}
 body {
     margin: 0px auto;
     background-color:#000;
@@ -10,18 +15,92 @@ body {
 .contents {
 	display: flex;
 	display: -webkit-flex;
+	flex-direction: column;
 	justify-content: center;
-	align-items: center;
+	align-items: stretch;
 	box-sizing: border-box;
 	-webkit-box-sizing: border-box;
 	height:100%;
 	background-color:#00113b;
+ 	border-radius: 100%;
+ 	font-family: 'Montserrat';
 }
 
-
-.load_text {
+.OBCount {
 	text-align: center;
-	font-size:2.5em;
+	font-size:3.5em;
 	color:#fff;
 	background-color:#00113b;
+}
+.WCount {
+	text-align: center;
+	font-size:1.5em;
+	color:#fff;
+	background-color:#00113b;
+}
+.ECount {
+	text-align: center;
+	font-size:1.5em;
+	color:#fff;
+	background-color:#00113b;
+}
+
+.reset_button {
+	background-color: #4CAF50;
+  	border: none;
+  	background-image:url(outline_refresh_white_24dp.png);
+  	background-position:50% 50%;
+    background-repeat:no-repeat;  
+  	size: 50px 50px;
+  	padding: 26px 26px;
+ 	border-radius: 100%;
+ 	font-size:0;
+ 	position: absolute;
+ 	left: 5px;
+}
+
+.topSection {
+	flex-grow: 1;
+	display: flex;
+	display: -webkit-flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+.bottomSection {
+	flex-grow: 1;
+	display: flex;
+	display: -webkit-flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: flex-start;
+}
+.wickets {
+	display: flex;
+	display: -webkit-flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: stretch;
+	margin-right: 5px;
+	
+}
+.extras {
+	display: flex;
+	display: -webkit-flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: stretch;
+	margin-left: 5px;
+}
+
+.Wtext {
+	color: #33ff33;
+	font-size:0.8em;
+	margin: 0em;
+}
+.Etext {
+	color: #ff3333;
+	font-size:0.8em;
+	margin: 0em;
 }

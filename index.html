@@ -1,29 +1,41 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<meta name="viewport" content="width=device-width,user-scalable=no">
-	<title>List</title>
-	<link rel="stylesheet" href="lib/tau/wearable/theme/default/tau.min.css">
-	<link rel="stylesheet" media="all and (-tizen-geometric-shape: circle)" href="lib/tau/wearable/theme/default/tau.circle.min.css">
-	<!-- load theme file for your application -->
-	<link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width,user-scalable=no">
+    <title>List</title>
+    <link rel="stylesheet" href="lib/tau/wearable/theme/default/tau.min.css">
+    <link rel="stylesheet" media="all and (-tizen-geometric-shape: circle)" href="lib/tau/wearable/theme/default/tau.circle.min.css">
+    <!-- load theme file for your application -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-	<div class="ui-page ui-page-active" id="main">
-		<header class="ui-header">
-			<h2 class="ui-title">Cricket Clicker</h2>
-		</header>
-		<div class="ui-content">
-			<ul class="ui-listview">
-				<li><a href="loadcounter.html">Load Counter</a></li>
-				<li><a href="#">Umpire Clicker</a></li>
-				<li><a href="#">Settings</a></li>
-			</ul>
-		</div>
-	</div>
-	<script src="lib/tau/wearable/js/tau.min.js"></script>
-	<script src="js/circle-helper.js"></script>
-	<script src="js/app.js"></script>
-	<script src="js/lowBatteryCheck.js"></script>
+    <div class="ui-page ui-page-active" id="main">
+        <div class=contents>
+            <div class=topSection>
+                <span class=OBCount id="ballover">0.0</span>
+            </div>
+            <div class=bottomSection>
+                <div class=wickets>
+                    <span class=WCount id="wicket">0</span>
+                    <p class=Wtext>Wickets</p>
+                </div>
+                <div class=extras>
+                    <span class=ECount id="extra">0</span>
+                    <p class=Etext>Extras</p>
+                </div>
+            </div>
+            <button type="button" class="reset_button" onclick="resetStats()">
+                reset
+            </button>
+        </div>
+    </div>
+
+    <script src="lib/tau/wearable/js/tau.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/circle-helper.js"></script>
+    <script src="js/lowBatteryCheck.js"></script>
 </body>
+
 </html>
